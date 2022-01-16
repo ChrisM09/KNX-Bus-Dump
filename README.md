@@ -16,13 +16,9 @@ _Note: The next steps will assume that you setup your environment according to t
 # Usage
   
   ## Creating the Hex Dump
-  1. Place the "Insert hex-dump-source filename here" file into the _introduction/src/main/java/_ folder from the Calimero Project suite.
+  1. Place the _wiresharkTpuartHexDump.java_ file into the _introduction/src/main/java/_ folder of the Calimero Project suite.
 
-      Place image here
-
-  3. Change into the _introduction_ folder.
-      
-      Place cd command image?
+  2. Change into the _introduction_ folder.
 
   3. To run the program, you can simply run:
       ```
@@ -39,7 +35,7 @@ _Note: The next steps will assume that you setup your environment according to t
   
   1. Upon starting Wireshark, wait for the initial loading to finish. Then click _File -> Import From Hex Dump..._
       
-     [](Wireshark-Import-From-Hex-Dump-Option.png)
+     <img src="Images\Wireshark-Import-From-Hex-Dump-Option.png">
       
   2. In order to properly parse this out, we need to give it a regular expression (regex) with some tags.
     
