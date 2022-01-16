@@ -83,7 +83,7 @@ Steps are taken and modified from a guide which can be found directly [here](htt
 
   
 ### Update the pom.xml file
-  This file contains settings for Linux and MacOS systems. But they need to be adjusted to the java version and location of where Java is loacted in. To be safe, I also updated the nar plugin version. 
+  This file contains settings for Linux and MacOS systems. But they need to be adjusted to the java version and location of where Java is located in. To be safe, I also updated the nar plugin version. 
   
   1) Update the *java.home* property located within the *properties* block before the *build* block with the information gathered from before.
   
