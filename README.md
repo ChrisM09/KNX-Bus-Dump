@@ -1,4 +1,4 @@
-# KNX Bus Dumper
+# KNX Bus Dump
 A tool to listen on a KNX bus via TPUART and the Calimero Project suite and to dump the data from the telegrams/packets into a Wireshark-compatible hex dump.
 
 
