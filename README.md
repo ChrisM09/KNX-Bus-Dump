@@ -1,4 +1,4 @@
-# Calimero Wireshark Hex Dump
+# KNX Bus Dumper
 A tool to listen on a KNX bus via TPUART and the Calimero Project suite and to dump the data from the packets into a Wireshark-compatible hex dump.
 
 
