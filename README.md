@@ -16,16 +16,16 @@ _Note: The next steps will assume that you setup your environment according to t
 # Usage
   
   ## Creating the Hex Dump
-  1. Place the _wiresharkTpuartHexDump.java_ file into the _introduction/src/main/java/_ folder of the Calimero Project suite.
+  1. Place the _KNXBusDump.java_ file into the _introduction/src/main/java/_ folder of the Calimero Project suite.
 
   2. Change into the _introduction_ folder.
 
   3. To run the program, you can simply run:
       ```
-      ./gradlew run -Pcalimero.serial.tpuart.maxInterByteDelay=60000 -Dmainclass=wiresharkTpuartHexDump
+      ./gradlew run -Pcalimero.serial.tpuart.maxInterByteDelay=60000 -Dmainclass=KNXBusDump
       ```
       
-  4. Now, you wait for some messages to be transmitted on the bus and the dumped telegrams will be in the _wiresharkHexDumpedTelegrams.txt_ file.
+  4. Now, you wait for some messages to be transmitted on the bus and the dumped telegrams will be in the _KNXBusDump-Telegrams.txt_ file.
 
   5. Cancel the tool using Ctrl-C and the file is now ready to be imported into Wireshark to be analyzed.
 
