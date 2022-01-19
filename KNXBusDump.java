@@ -35,7 +35,7 @@
 */
 
 /*
- * Wireshark Tpuart Hex Dump Author: Chris Morales
+ * KNX Bus Dump Author: Chris Morales
  */
 
 import tuwien.auto.calimero.datapoint.Datapoint;
@@ -65,7 +65,7 @@ import java.time.Instant;
  *
  * To stop this program, simply press Ctrl-C.
  */
-public class wiresharkTpuartHexDump extends KnxDeviceServiceLogic implements Runnable {
+public class KNXBusDump extends KnxDeviceServiceLogic implements Runnable {
 
 	/*************************************** 
 	 * 
@@ -74,13 +74,13 @@ public class wiresharkTpuartHexDump extends KnxDeviceServiceLogic implements Run
 	 * 
 	 ****************************************/
 	private static final String portId = "/dev/ttyKNX1";
-	private static final String deviceName = "Wireshark Tpuart Hex Dump Device";
+	private static final String deviceName = "KNX Bus Dump Device";
 	private static final IndividualAddress deviceAddress = new IndividualAddress(0, 2, 15);
 
 	// Runs the hex dump device.
 	public static void main(final String[] args) throws KNXException, IOException 
 	{
-		new wiresharkTpuartHexDump().run();
+		new KNXBusDump().run();
 	}
 
 
@@ -95,7 +95,7 @@ public class wiresharkTpuartHexDump extends KnxDeviceServiceLogic implements Run
 			final var link = new KNXNetworkLinkTpuart(portId, new TPSettings(deviceAddress), List.of()))
 		{
 			// Filename for hex dump
-			String hexDumpFilename = "wiresharkHexDumpedTelegrams.txt";
+			String hexDumpFilename = "KNXBusDump-Telegrams.txt";
 
 			// Start of a new packet header for wireshark's "import from hex dump" functionality.
 			String newPacketIndicator = " 000000 ";
