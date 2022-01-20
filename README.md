@@ -25,7 +25,7 @@ _Note: The next steps will assume that you setup your environment according to t
 
   3. To run the program, you can simply run:
       ```
-      ./gradlew run -Pcalimero.serial.tpuart.maxInterByteDelay=60000 -Dmainclass=KNXBusDump
+      ./gradlew run -Pcalimero.serial.tpuart.maxInterByteDelay=60000 -DmainClass=KNXBusDump
       ```
       
   4. Now, you wait for some messages to be transmitted on the bus and the dumped telegrams will be in the _KNXBusDump-Telegrams.txt_ file.
