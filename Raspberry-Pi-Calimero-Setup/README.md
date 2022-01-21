@@ -174,11 +174,11 @@ For example (highlighted in yellow):
 
 _Introduction repository tag location:_
 
-<img src="/KNX-Raspberry-Pi-Calimero-Setup/Images/Introduction-Releases-Location.png">
+<img src="/Raspberry-Pi-Calimero-Setup/Images/Introduction-Releases-Location.png">
 
 _Calimero Tools repository tag location:_
 
-<img src="/KNX-Raspberry-Pi-Calimero-Setup/Images/Tools-Releases-Location.png">
+<img src="/Raspberry-Pi-Calimero-Setup/Images/Tools-Releases-Location.png">
 
 You will need the hashes of ALL the repos that you downloaded:
 1. Calimero-core 
