@@ -1,5 +1,5 @@
 # Raspberry Pi Calimero Setup
-A short walkthrough to describe how to set up the Calimero-tools suite to be used with a Raspberry Pi 3 and/or 4.
+A short walkthrough to describe how to set up the Calimero-tools suite to be used with a Raspberry Pi 3 
 
 *Note: This walkthrough will show how to use this suite with a Raspberry Pi HAT and TPUART. Setup for the HAT is [here](/KNX-Raspberry-Pi-Hat-Usage/README.md)*
 
@@ -15,6 +15,7 @@ Commands to download the suite:
   git clone https://github.com/calimero-project/calimero-tools.git
   git clone https://github.com/calimero-project/calimero-rxtx.git
   git clone https://github.com/calimero-project/calimero-core.git
+  git clone https://github.com/calimero-project/calimero-device.git
   git clone https://github.com/calimero-project/serial-native.git
   git clone https://github.com/calimero-project/introduction.git
 ```
@@ -96,7 +97,7 @@ To build with Maven, all you need to do is change into the directory in which se
     mvn compile
   ```  
 
-This should not give you any compilation errors. It will take a few minutes as it will download other resources from the internet.
+This should not give you any compilation errors. If it does, refer to the _Troubleshooting_ section. You won't be able to continue without getting past this step. It will take a few minutes as it will download other resources from the internet.
   
 The location of the compiled library will be under target/nar/*gpp-jni
   
@@ -116,7 +117,7 @@ Keep note of the .so file location.
   
   This will print out a list of locations where various java libraries can be placed and then used. In my instance, I could simply use the */usr/lib* directory. Each qualifying path is separated by a colon, you can use whichever you'd like. 
   
-  Copy the .so file into the directory of your choice.
+  Copy the resulting .so file into the directory of your choice.
 
   
 ## Avoiding timeout issues with Properties scan
@@ -156,3 +157,48 @@ Keep note of the .so file location.
   ```
   
   And that should be it for the properties scan. 
+
+
+# Troubleshooting
+
+## Calimero-Suite
+
+### MVN compilation errors 
+A version of the calimero-project that does in fact work with a Raspberry Pi 3 is 2.5. 
+
+In order to revert back, you'll need to utilize Git's _checkout_ capability. You will need the correct commit hash to change the state of the repository. You can find the tags under the _Releases_ section.
+
+_Note: The hashes are the same whether or not you're looking at Releases or Tags_
+
+For example (highlighted in yellow):
+
+_Introduction repository tag location:_
+
+<img src="/KNX-Raspberry-Pi-Calimero-Setup/Images/Introduction-Releases-Location.png">
+
+_Calimero Tools repository tag location:_
+
+<img src="/KNX-Raspberry-Pi-Calimero-Setup/Images/Tools-Releases-Location.png">
+
+You will need the hashes of ALL the repos that you downloaded:
+1. Calimero-core 
+2. Calimero-tools
+3. Calimero-rxtx
+4. Calimero-device
+5. Introduction
+6. Serial-native
+
+
+#### Reverting back to a previous version
+
+Now that you have the correct hashes. You can begin reverting. Just
+be aware that if you had changed the _pom.xml_ file in the _serial-native_ directory, then you will not be able to simply revert back. You will need to either undo the changes or you can delete the directory as a whole, then clone again, and then apply the checkout command.
+
+#### Format of the checkout command
+
+```
+git checkout <Hash of Commit>
+```
+Simply just change into the corresponding directories of the different projects and run this command with the corresponding hashes.
+
+Once this is done, then you can rerun ``` mvn compile ``` 
