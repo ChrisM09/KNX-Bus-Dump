@@ -112,3 +112,9 @@ Make sure that KNXD (if you have it installed per these guides) is not running. 
 # Trying sample output
 
 In this repository, I have provided the sample file data in _Sample-KNXBusDump-Telegrams.txt_ that was used to create the screenshots. Feel free to import this into Wireshark to test it yourself.
+
+# Testing scenario
+
+The tool was tested on this local KNX Testbed.
+
+<img src="Images/Local-KNX-Setup.jpeg">
