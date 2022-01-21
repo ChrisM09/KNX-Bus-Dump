@@ -98,7 +98,7 @@ _Note: The next steps will assume that you setup your environment according to t
 
 # Troubleshooting Guide 
 
-## Trouble running the Bus Dump program
+These are some common errors that can occur when running this program with this setup guide. I have provided solutions in hopes that it fixes the error.
 
 ### Running Discover KNX Servers program instead of the Bus Dump
 
@@ -107,3 +107,8 @@ Make sure that you type in all the commands exactly. Running the command with "D
 ### Cannot get the initial state of the TPUART port
 
 Make sure that KNXD (if you have it installed per these guides) is not running. If following this guide, then KNXD will be using that same port and only one process can use the serial port at a time.
+
+
+# Trying sample output
+
+In this repository, I have provided the sample file data in _Sample-KNXBusDump-Telegrams.txt_ that was used to create the screenshots. Feel free to import this into Wireshark to test it yourself.
