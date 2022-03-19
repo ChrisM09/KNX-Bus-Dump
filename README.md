@@ -108,6 +108,9 @@ Make sure that you type in all the commands exactly. Running the command with "D
 
 Make sure that KNXD (if you have it installed per these guides) is not running. If following this guide, then KNXD will be using that same port and only one process can use the serial port at a time.
 
+### Wireshark: "Can't initialize scanner: Unknown error"
+If you copy and pasted the contents of the hex dump files from above, you could be missing an extra new line character. For example, in "SampleData1.txt", the github representation shows 4 lines of data when in reality it is 4 lines of data *plus* a newline character. So one possible option is to simply press "Enter" after the last byte of data in the file you're importing.
+
 
 # Trying sample output
 
